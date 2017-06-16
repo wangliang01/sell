@@ -1,0 +1,44 @@
+/* rem */
+
+html {
+    font-size: 100px;
+}
+
+html,body {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.32rem;
+}
+
+/* 清除input textarea outline 效果 */
+input,textarea{
+	outline: none;
+}
+
+/* 清除a 下划线效果 */
+a{
+	text-decoration: none;
+}
+
+/* 1像素边框 */
+.border-1px{
+	@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+		&::after,&::before{
+			-webkit-transform: scaleY(0.7);
+			transform: scaleY(0.7);
+		}
+	}
+	@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+		&::after,&::before{
+			-webkit-transform: scaleY(0.5);
+			transform: scaleY(0.5);
+		}
+	}
+	@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+		&::after,&::before{
+			-webkit-transform: scaleY(0.3333);
+			transform: scaleY(0.3333);
+		}
+	}
+}
